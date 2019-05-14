@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Other Expenses</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <style type="text/css">
     <style type="text/css">
     * {
         font-family: "Arial";
@@ -26,9 +28,7 @@
     }
 
         body{
-       background-image: url(img/blue.jpg);
-       background-repeat: no-repeat;
-       background-color: #000000;
+        background-color: rgb(249,251,255);
        }
            #regForm label{
       color: black;
@@ -145,70 +145,78 @@ $("#frequency2").removeClass("showdiv");
 $("#frequency2").addClass("none");
 }
 </script>
+
 </head>
 <body>
     <!--nav-->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark" style="background: rgb(34,34,34); width: 95%;text-align:center;margin: auto; font-size: 20px; border-radius: 5px;">
-        <a class="navbar-brand" href="http://www.firststepsinmel.ml/" ><img src="img/webLogo3.png" style="display: inline; height: 52px; margin-top: -5px;background-color: rgb(34,34,34); border-radius: 10px;">
-        <span style="font-family: 'Arial Black';font-size: 24px;color:white; margin-left: 10px;">First Steps in Melbourne</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333" style="margin-left: 100px;">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.firststepsinmel.ml/">Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="firstStepForm.php">Living Cost Calculator
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-        <li class="nav-item">
-                    <a class="nav-link" href="Bills.php">Bills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/">Student Support</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="comparsion.html">Compare with Shanghai</a>
-                </li>
-         <!--        <li class="nav-item">
-                    <a class="nav-link" href="#">Prediction</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About us</a>
-                </li> -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: none;">Quick start here
-                    </a>
-                    <div class="dropdown-menu dropdown-default">
-                        <a class="dropdown-item" href="firstStepForm.php">Living Cost Calculator</a>
-                        <a class="dropdown-item" href="Bills.php">Bills</a>
-                        <a class="dropdown-item" href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/">Student Support</a>
-                        <a class="dropdown-item" href="comparsion.html">Comparision with Shanghai</a>
-               <!--          <a class="dropdown-item" href="#">Prediction</a>
-                        <a class="dropdown-item" href="#">About us</a> -->
+    <div class="navbar-wrapper" style="position: fixed; top: 12px;left: 10px;right: 10px; z-index: 999;">
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse navbar-static-top" style="background-color: white; color: white; border: 1px solid rgb(224,227,230);margin-top: -20px;box-shadow: 4px 4px 20px lightblue;">
+                <div class="container-fluid">
+                    <div class="navbar-header" style="height: 62px;">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" value="click here to start" style=" width: 40px;height: 40px; text-align: center;">
+                        </button>
+                        <a class="navbar-brand active" href="http://www.firststepsinmel.ml/"><img src="img/webLogo3.png" style="display: inline; height: 43px; margin-top: -10px;">
+                            <span class="hidden-sm-down hidden-xs" style="font-family: 'Arial Black';font-size: 24px;color:black; height: 20px; line-height: 20px;margin-left: 10px;">First Steps in Melbourne</span></a>
                     </div>
-                </li>
-            </ul>
+                    <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://www.firststepsinmel.ml/" style="color: black;">Home</a></li>
+                            <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="introduction.php">Calculator</a></li>
+                                    <li><a href="Bills.php">Other expenses</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" id="subSupDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="stuSup"><span class="caret"></span>&nbsp;&nbsp;Student Support</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/find_a_suburb/">Find a Suburb</a></li>
+                                    <li><a href="TipsList.html">Guidance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="comparison.html" style="color: black;">Compare with Shanghai</a></li>
+                            <li><a href="Prediction.php" style="color: black;">Prediction</a></li>
+                            <!-- <li class="dropdown" id="preDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="preSup"><span class="caret"></span>&nbsp;&nbsp;Prediction</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Your future costs</a></li>
+                                    <li><a href="#">article 1</a></li>
+                                    <li><a href="#">article 2</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="introduction.php">Living Cost Calculator</a></li>
+                                    <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/find_a_suburb/">Student Support</a></li>
+                                    <li><a href="comparison.html">Compare with Shanghai</a></li>
+                                    <li><a href="Prediction.php">Prediction</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </nav>
-            <div class="container" style="height: 480px;width: 75%;text-align: center; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue;">
-              <p><h4>Calculate the approximate cost of monthly bills</h4></p>
+    </div>
+    <br>
+    <br>
+    <br>
+            <div class="container" style="height: 530px;width: 70%;text-align: center; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto;">
+              <h4>Calculate the approximate cost of monthly bills</h4>
                   <div class="tab" style="display: inline-block; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
                     <button class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
                     <button class="tablinks" onclick="openEvent(event, 'Internet')">Internet</button>
                     <button class="tablinks" onclick="openEvent(event, 'Energy')">Electricity & Gas</button>
                     <button class="tablinks" onclick="openEvent(event, 'Water')">Water</button>
                   </div>
-                  <div id="Phone" class="tabcontent" style="height: 300px;width: 100%;text-align:center;">
-                      <div class="header" style="height: 140px; width: 100%">
+                  <div id="Phone" class="tabcontent" style="height: 200px;width: 100%;text-align:center;">
+                      <div class="header" style="height: 10px; width: 100%">
                         <div class="putimage">
                         <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/phone.jpg"; >
-                      <h2>Phone Usage</h2>
-                      <div style= "font-size: 18px;">How much data would you need?</div>
+                      <div style= "font-size: 20px;">How much data would you need?</div>
                       <div id="RadioButtons1">
                         <input type="radio" name="RadioButtons1" id="Radio1" value="2">
                         <label for="Radio1">2GB</label>
@@ -217,7 +225,7 @@ $("#frequency2").addClass("none");
                         <input type="radio" name="RadioButtons1" id="Radio3" value="10">
                         <label for="Radio3">10GB</label>
                       </div>
-                   <div style= "font-size: 18px;">Do you require international calling?</div>
+                   <div style= "font-size: 20px;">Do you require international calling?</div>
                       <div id="RadioButtons2">
                       <input type="radio" name="RadioButtons2" id="Radio4" value="1">
                       <label for="Radio4">Yes</label>
@@ -226,8 +234,9 @@ $("#frequency2").addClass("none");
                     </div>
                    <div>
                      <button class="btn btn-primary btn" id="Button1" onClick="phonecost()">Calculate</button>
+                     <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Cheapest deals</button>
                    </div>
-                   <div> Average cost per month is:<span id="billval"></span></div>
+                   <div> Average cost per month is: $<span id="billval"></span></div>
                       <!--<div>
                         <button 
                             id="Button3" onclick="document.getElementById('popup')">Recommendation
@@ -241,8 +250,8 @@ $("#frequency2").addClass("none");
                 <div class="header" style="height: 140px; width: 100%">
                     <div class="putimage">
                         <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/internet.jpg">
-              <h2>Internet</h2>
-              How much data do you need per month?
+                        <br>
+              <div style= "font-size: 20px;">How much data do you need per month? </div>
               <div id="RadioButtons3">
                 <input type="radio" name="RadioButtons3" id="Radio6" value="100">
                 <label for="Radio6">100GB</label>
@@ -253,38 +262,43 @@ $("#frequency2").addClass("none");
               </div>
                <div>
                   <button class="btn btn-primary btn" id="Button2" onClick="intbill()">Calculate</button>
+                  <button class="btn btn-primary btn" id="Button1" onClick="viewdata1()">Cheapest deals</button>
                    </div>
-                   <div> Average cost per month is:<span id="intbillval"></span></div>
+                   <div> Average cost per month is: $<span id="intbillval"></span></div>
               </div>
               </div>
           </div>
-            <div id="Energy" class="tabcontent" style="height: 300px;width: 100%;text-align:center; overflow: auto">
+            <div id="Energy" class="tabcontent" style="height: 300px;width: 100%;text-align:auto;">
               <div class="header" style="height: 140px; width: 100%">
                     <div class="putimage">
                         <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/electricity.jpg">
-              <h3>Electricity</h3>
-        Do you use Electric heater?
+                        <br>
+        No. of residents:
         <div id="RadioButtons7">
           <input type="radio" name="RadioButtons7" id="Radio18" value="1">
-          <label for="Radio18">Yes</label>
-          <input type="radio" name="RadioButtons7" id="Radio19" value="0">
-          <label for="Radio19">No</label>
+          <label for="Radio18">One</label>
+          <input type="radio" name="RadioButtons7" id="Radio19" value="2">
+          <label for="Radio19">Two</label>
+          <input type="radio" name="RadioButtons7" id="Radio53" value="3">
+          <label for="Radio53">Three</label>
+          <input type="radio" name="RadioButtons7" id="Radio54" value="4">
+          <label for="Radio54">Four</label>
         </div>
-        Do you use Air conditioner?
+        Air conditioner:
         <div id="RadioButtons8">
           <input type="radio" name="RadioButtons8" id="Radio20" value="1">
           <label for="Radio20">Yes</label>
           <input type="radio" name="RadioButtons8" id="Radio21" value="0">
           <label for="Radio21">No</label>
         </div>
-      Do you use Underfloor heating?
+      Underfloor heating:
         <div id="RadioButtons9">
           <input type="radio" name="RadioButtons9" id="Radio22" value="1">
           <label for="Radio22">Yes</label>
           <input type="radio" name="RadioButtons9" id="Radio23" value="0">
           <label for="Radio23">No</label>
         </div>
-      Do you use Electric water heater?
+      Electric water heater:
         <div id="RadioButtons10">
           <input type="radio" name="RadioButtons10" id="Radio24" value="1">
           <label for="Radio24">Yes</label>
@@ -292,17 +306,18 @@ $("#frequency2").addClass("none");
           <label for="Radio25">No</label>
         </div>
         <button class="btn btn-primary btn" id="Button3" onClick="eleccal()">Calculate</button>
+        <button class="btn btn-primary btn" id="Button1" onClick="viewdata2()">Cheapest deals</button>
               <div> Your usage<span id="elecost"></span></div>
             </div>
             </div>
           </div>
 
-  <div id="Water" class="tabcontent" style="height: 300px;width: 100%;text-align:center; overflow: auto">
+  <div id="Water" class="tabcontent" style="height: 300px;width: 100%;text-align:auto;">
     <div class="header" style="height: 140px; width: 100%">
                     <div class="putimage">
                         <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/water.jpg">
-    <h2>Water</h2>
-  <div style="font-size: 20px; font-weight: bolder;" >No. of residents:</div>
+                        <br>
+  <div style="font-size: 20px;" >No. of residents:</div>
       <input type="radio" name="RadioButtons6" id="Radio15" value="1">
       <label for="Radio15">One</label>
       <input type="radio" name="RadioButtons6" id="Radio16" value="2">
@@ -311,13 +326,14 @@ $("#frequency2").addClass("none");
       <label for="Radio17">Three</label>
       <input type="radio" name="RadioButtons6" id="Radio32" value="4">
       <label for="Radio32">Four</label>
-    <div style="font-size: 20px; font-weight: bolder;"> Dishwasher:</div>
+    <div style="font-size: 20px;"> Dishwasher:</div>
       <input type="radio" name="RadioButtons11" id="Radio26" value="1" onclick="showFre()">
       <label for="Radio26">Yes</label>
       <input type="radio" name="RadioButtons11" id="Radio27" value="0" onclick="hideFre()">
       <label for="Radio27">No</label>
       <div id="frequency" class="none">
     <i>Frequency(no. of times per week):
+      <br>
       <input type="radio" name="RadioButtons14" id="Radio32" value="1">
       <label for="Radio32">One</label>
       <input type="radio" name="RadioButtons14" id="Radio33" value="2">
@@ -334,7 +350,7 @@ $("#frequency2").addClass("none");
       <label for="Radio38">Seven</label>
      </i>
    </div>
-     <div style="font-size: 20px; font-weight: bolder;"> Washing Machine:</div>
+     <div style="font-size: 20px;"> Washing Machine:</div>
       <input type="radio" name="RadioButtons12" id="Radio28" value="1" onclick="showFre1()">
       <label for="Radio28">Yes</label>
       <input type="radio" name="RadioButtons12" id="Radio29" value="0" onclick="hideFre1()">
@@ -357,7 +373,7 @@ $("#frequency2").addClass("none");
       <label for="Radio45">Seven</label>
     </i>
   </div>
-      <div style="font-size: 20px; font-weight: bolder;">Evaporative Cooler: </div>
+      <div style="font-size: 20px;">Evaporative Cooler: </div>
       <input type="radio" name="RadioButtons13" id="Radio30" value="1" onclick="showFre2()">
       <label for="Radio30">Yes</label>
       <input type="radio" name="RadioButtons13" id="Radio31" value="0" onclick="hideFre2()">
@@ -382,7 +398,7 @@ $("#frequency2").addClass("none");
   </div>
   <br>
                   <button class="btn btn-primary btn" id="Button4" onClick="waterbill()">Calculate</button>
-                   <div> Average cost per month is:<span id="waterbillval"></span></div>
+                   <div> Average cost per month is: $<span id="waterbillval"></span></div>
               </div>
   </div>
 </div>
@@ -556,6 +572,11 @@ $(function() {
 $(function() {
   $( "#RadioButtons16" ).buttonset(); 
 });
+  function calculatorDrag() {
+      $("#costFont").css('background-color', "white");
+      $("#stuSup").css('background-color', "white");
+      $("#preSup").css('background-color', "white");
+  }
 </script>
 <style> 
 .none { display:none; }, 
