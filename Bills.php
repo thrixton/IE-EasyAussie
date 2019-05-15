@@ -204,20 +204,22 @@ $("#frequency2").addClass("none");
     <br>
     <br>
     <br>
-            <div class="container" style="height: 530px;width: 70%;text-align: center; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto;">
-              <h4>Calculate the approximate cost of monthly bills</h4>
-                  <div class="tab" style="display: inline-block; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
-                    <button class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
-                    <button class="tablinks" onclick="openEvent(event, 'Internet')">Internet</button>
-                    <button class="tablinks" onclick="openEvent(event, 'Energy')">Electricity & Gas</button>
-                    <button class="tablinks" onclick="openEvent(event, 'Water')">Water</button>
+            <div class="container" style="height: 570px;width: 70%; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto; text-align: center;">
+              <div style="text-align: center; font-size: 20px; font-family: Arial Black; font-weight: bold;">Calculate the approximate cost of monthly bills</div>
+                  <div class="tab" style="height:50px; width: 65% border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
+                    <button style="height:50px; width: 25%;font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
+                    <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Internet')">Internet</button>
+                    <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Energy')">Electricity & Gas</button>
+                    <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Water')">Water</button>
                   </div>
-                  <div id="Phone" class="tabcontent" style="height: 200px;width: 100%;text-align:center;">
-                      <div class="header" style="height: 10px; width: 100%">
-                        <div class="putimage">
-                        <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/phone.jpg"; >
-                      <div style= "font-size: 20px;">How much data would you need?</div>
-                      <div id="RadioButtons1">
+                  <div id="Phone" class="tabcontent">
+                      <div class="header" style="height: 100px; width: 100%">
+                       <div class="putimage" style="text-align: center;">
+                        <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/phone.jpg";>
+                      </div>
+                      <br>
+                      <div style="font-weight: bold; font-size: 30px;">How much data would you need?</div>
+                      <div id="RadioButtons1" style="color: black;">
                         <input type="radio" name="RadioButtons1" id="Radio1" value="2">
                         <label for="Radio1">2GB</label>
                         <input type="radio" name="RadioButtons1" id="Radio2" value="6">
@@ -225,34 +227,35 @@ $("#frequency2").addClass("none");
                         <input type="radio" name="RadioButtons1" id="Radio3" value="10">
                         <label for="Radio3">10GB</label>
                       </div>
-                   <div style= "font-size: 20px;">Do you require international calling?</div>
-                      <div id="RadioButtons2">
+                   <div style="font-weight: bold;font-size: 30px;">Do you require international calling?</div>
+                      <div id="RadioButtons2" style="color: black;">
                       <input type="radio" name="RadioButtons2" id="Radio4" value="1">
                       <label for="Radio4">Yes</label>
                       <input type="radio" name="RadioButtons2" id="Radio5" value="0">
                       <label for="Radio5">No</label>
                     </div>
+                    <br>
                    <div>
                      <button class="btn btn-primary btn" id="Button1" onClick="phonecost()">Calculate</button>
-                     <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Cheapest deals</button>
+                     <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Cheap deals</button>
                    </div>
-                   <div> Average cost per month is: $<span id="billval"></span></div>
+                   <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="billval"></span></div>
                       <!--<div>
                         <button 
                             id="Button3" onclick="document.getElementById('popup')">Recommendation
                         </button>
                       </div> -->
                   </div>
-                </div>
               </div>
 
-            <div id="Internet" class="tabcontent" style="height: 300px;width: 100%;text-align:center;">
+            <div id="Internet" class="tabcontent">
                 <div class="header" style="height: 140px; width: 100%">
                     <div class="putimage">
                         <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/internet.jpg">
                         <br>
-              <div style= "font-size: 20px;">How much data do you need per month? </div>
-              <div id="RadioButtons3">
+                        <br>
+              <div style="font-weight: bold; font-size: 30px;">How much data do you need per month? </div>
+              <div id="RadioButtons3" style="color: black;">
                 <input type="radio" name="RadioButtons3" id="Radio6" value="100">
                 <label for="Radio6">100GB</label>
                 <input type="radio" name="RadioButtons3" id="Radio7" value="500">
@@ -260,11 +263,12 @@ $("#frequency2").addClass("none");
                 <input type="radio" name="RadioButtons3" id="Radio8" value="Unlimited">
                 <label for="Radio8">Unlimited</label>
               </div>
-               <div>
+              <br>
+               <div style="text-align: center;">
                   <button class="btn btn-primary btn" id="Button2" onClick="intbill()">Calculate</button>
-                  <button class="btn btn-primary btn" id="Button1" onClick="viewdata1()">Cheapest deals</button>
+                  <button class="btn btn-primary btn" id="Button1" onClick="viewdata1()">Cheap deals</button>
                    </div>
-                   <div> Average cost per month is: $<span id="intbillval"></span></div>
+                   <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="intbillval"></span></div>
               </div>
               </div>
           </div>
@@ -312,12 +316,13 @@ $("#frequency2").addClass("none");
             </div>
           </div>
 
-  <div id="Water" class="tabcontent" style="height: 300px;width: 100%;text-align:auto;">
+  <div id="Water" class="tabcontent">
     <div class="header" style="height: 140px; width: 100%">
                     <div class="putimage">
-                        <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;" src="img/water.jpg">
+                        <img style="margin-top: 15px; border-radius: 10px;box-shadow: 4px 4px 15px lightblue;" src="img/water.jpg">
                         <br>
-  <div style="font-size: 20px;" >No. of residents:</div>
+<div class="container" style="height: 250px; width: 50%; float: left;">
+  <div style="font-weight: bold; font-size: 30px;" >No. of residents <img title="Each person uses an average of 224 liters per day" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons6" id="Radio15" value="1">
       <label for="Radio15">One</label>
       <input type="radio" name="RadioButtons6" id="Radio16" value="2">
@@ -326,7 +331,7 @@ $("#frequency2").addClass("none");
       <label for="Radio17">Three</label>
       <input type="radio" name="RadioButtons6" id="Radio32" value="4">
       <label for="Radio32">Four</label>
-    <div style="font-size: 20px;"> Dishwasher:</div>
+    <div style="font-weight: bold; font-size: 30px;"> Dishwasher <img title="Each use consumes 50 liters of water" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons11" id="Radio26" value="1" onclick="showFre()">
       <label for="Radio26">Yes</label>
       <input type="radio" name="RadioButtons11" id="Radio27" value="0" onclick="hideFre()">
@@ -350,13 +355,16 @@ $("#frequency2").addClass("none");
       <label for="Radio38">Seven</label>
      </i>
    </div>
-     <div style="font-size: 20px;"> Washing Machine:</div>
+ </div>
+ <div class="container" style="height: 250px; width: 50%; float: right;">
+     <div style="font-weight: bold; font-size: 30px;"> Washing Machine <img title="Each use consumes 150 liters of water" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons12" id="Radio28" value="1" onclick="showFre1()">
       <label for="Radio28">Yes</label>
       <input type="radio" name="RadioButtons12" id="Radio29" value="0" onclick="hideFre1()">
       <label for="Radio29">No</label>
     <div id="frequency1" class="none">
      <i>Frequency(no. of times per week):
+      <br>
       <input type="radio" name="RadioButtons15" id="Radio39" value="1">
       <label for="Radio39">One</label>
       <input type="radio" name="RadioButtons15" id="Radio40" value="2">
@@ -373,13 +381,14 @@ $("#frequency2").addClass("none");
       <label for="Radio45">Seven</label>
     </i>
   </div>
-      <div style="font-size: 20px;">Evaporative Cooler: </div>
+      <div style="font-weight: bold; font-size: 30px;">Evaporative Cooler <img title="Each hour 90 liters of water is used" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons13" id="Radio30" value="1" onclick="showFre2()">
       <label for="Radio30">Yes</label>
       <input type="radio" name="RadioButtons13" id="Radio31" value="0" onclick="hideFre2()">
       <label for="Radio31">No</label>
     <div id="frequency2" class="none">
       <i>No. of hours a day:
+        <br>
       <input type="radio" name="RadioButtons16" id="Radio46" value="1">
       <label for="Radio46">One</label>
       <input type="radio" name="RadioButtons16" id="Radio47" value="2">
@@ -396,9 +405,10 @@ $("#frequency2").addClass("none");
       <label for="Radio52">Seven</label>
     </i>
   </div>
+  </div>
   <br>
                   <button class="btn btn-primary btn" id="Button4" onClick="waterbill()">Calculate</button>
-                   <div> Average cost per month is: $<span id="waterbillval"></span></div>
+                   <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="waterbillval"></span></div>
               </div>
   </div>
 </div>
@@ -582,5 +592,11 @@ $(function() {
 .none { display:none; }, 
 .showDIV { display:block; } 
 </style>  
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+</style>
 </body>
 </html> 
