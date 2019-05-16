@@ -222,7 +222,7 @@ $("#contractval").addClass("none");
                   <div class="tab" style="height:50px; width: 65% border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
                     <button style="height:50px; width: 25%;font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Internet')">Internet</button>
-                    <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Energy')">Electricity & Gas</button>
+                    <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Energy')">Energy</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Water')">Water</button>
                   </div>
                   <div id="Phone" class="tabcontent">
@@ -233,8 +233,8 @@ $("#contractval").addClass("none");
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/phone2.jpg";>
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/phone4.jpg";>
                       </div>
+                      <div class="container" style="height: 170px; width: 80%;">
                       <div class="container" style="float: right; height: 170px; width: 50%;">
-                        
                         <br>
                       <div style="font-weight: bold; font-size: 27px;">Data:</div>
                       <div id="RadioButtons1" style="color: black;">
@@ -271,13 +271,14 @@ $("#contractval").addClass("none");
                       <label for="Radio56">No</label>
 					  </div>
           </div>
+        </div>
           </div>
-                   <div>
+                   <div class="container" style= "height: 170px;width: 70%; float: center;">
                      <button class="btn btn-primary btn" id="Button1" onClick="phonecost()">Calculate</button>
                      <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Best deals</button>
-                   </div>
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="billval"></span></div>
                    <div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval"></span></div>
+                 </div>
                       <!--<div>
                         <button 
                             id="Button3" onclick="document.getElementById('popup')">Recommendation
@@ -315,15 +316,18 @@ $("#contractval").addClass("none");
               </div>
               </div>
           </div>
-            <div id="Energy" class="tabcontent" style="height: 300px;width: 100%;text-align:auto;">
-                      <div class="header" style="height: 140px; width: 100%;">
-                       <div class="putimage" style="text-align: center;">
+<div id="Energy" class="tabcontent" style="height: 300px;width: 100%;text-align:auto;">
+	<div class="header" style="height: 140px; width: 100%;">
+         <div class="putimage" style="text-align: center;">
                         <img style=" height: 140px; width: 25%; float:left; opacity: 0.7;" src="img/elec2.jpg";>
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/elec3.jpg";>
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/elec4.jpg";>
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/electricity.jpg";>
-        No. of residents:
-        <div id="RadioButtons7">
+ <div class="container" style="height: 170px; width: 80%;">
+   <div class="container" style="float: left; height: 170px; width: 50%;">
+    <br>
+  <div style="font-weight: bold; font-size: 27px;" >No. of residents <img title="The utilization and the cost calculated is based on the data on https://www.aer.gov.au/retail-markets/retail-guidelines-reviews/electricity-and-gas-bill-benchmarks-for-residential-customers-2017"src="img/infoicon.png"></div>
+      <div>
           <input type="radio" name="RadioButtons7" id="Radio18" value="1">
           <label for="Radio18">One</label>
           <input type="radio" name="RadioButtons7" id="Radio19" value="2">
@@ -333,31 +337,39 @@ $("#contractval").addClass("none");
           <input type="radio" name="RadioButtons7" id="Radio54" value="4">
           <label for="Radio54">Four</label>
         </div>
-        Air conditioner:
-        <div id="RadioButtons8">
+    <div style="font-weight: bold; font-size: 27px;"> Air conditioner: </div>
+      <div>
           <input type="radio" name="RadioButtons8" id="Radio20" value="1">
           <label for="Radio20">Yes</label>
           <input type="radio" name="RadioButtons8" id="Radio21" value="0">
           <label for="Radio21">No</label>
         </div>
-      Underfloor heating:
-        <div id="RadioButtons9">
+		</div>
+ <div class="container" style="float: right; height: 170px; width: 50%; content: center;">
+<br>	
+<div style="font-weight: bold; font-size: 27px;">  Underfloor heating: </div>
+      <div>
           <input type="radio" name="RadioButtons9" id="Radio22" value="1">
           <label for="Radio22">Yes</label>
           <input type="radio" name="RadioButtons9" id="Radio23" value="0">
           <label for="Radio23">No</label>
         </div>
-      Electric water heater:
-        <div id="RadioButtons10">
+<div style="font-weight: bold; font-size: 27px;">  Electric heater: </div>
+      <div>
           <input type="radio" name="RadioButtons10" id="Radio24" value="1">
           <label for="Radio24">Yes</label>
           <input type="radio" name="RadioButtons10" id="Radio25" value="0">
           <label for="Radio25">No</label>
         </div>
+</div>
+</div>
+<div class="container" style= "height: 170px;width: 70%; float: center;">
         <button class="btn btn-primary btn" id="Button3" onClick="eleccal()">Calculate</button>
-        <button class="btn btn-primary btn" id="Button1" onClick="viewdata2()">Cheapest deals</button>
-              <div> Your usage<span id="elecost"></span></div>
+        <button class="btn btn-primary btn" id="Button1" onClick="viewdata2()">Best deals</button>
+                   <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="elecbillval"></span></div>
+                   <div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval2"></span></div>
             </div>
+			</div>
             </div>
           </div>
 
@@ -371,7 +383,7 @@ $("#contractval").addClass("none");
                         
 <div class="container" style="height: 250px; width: 50%; float: left;">
 <br>
-  <div style="font-weight: bold; font-size: 27px;" >No. of residents <img title="Each person uses an average of 224 liters per day and the cost includes cost for recycling, sweage and unchlorinated water!" src="img/infoicon.png"></div>
+  <div style="font-weight: bold; font-size: 27px;" >No. of residents <img title="Each person uses an average of 224 liters per day and the cost includes cost for recycling, sweage and unchlorinated water! This is based on the data provided on https://www.yvw.com.au/help-advice/why-my-water-use-high/check-your-appliances" src="img/infoicon.png"></div>
       <div>
 	  <input type="radio" name="RadioButtons6" id="Radio15" value="1">
       <label for="Radio15">One</label>
@@ -383,7 +395,7 @@ $("#contractval").addClass("none");
       <label for="Radio32">Four</label>
     </div>
 	<br>
-    <div style="font-weight: bold; font-size: 27px;"> Dishwasher <img title="Each use consumes 50 liters of water" src="img/infoicon.png"></div>
+    <div style="font-weight: bold; font-size: 27px;"> Dishwasher <img title="Each use consumes 50 liters of water based on the data provided on https://www.yvw.com.au/help-advice/why-my-water-use-high/check-your-appliances" src="img/infoicon.png"></div>
       <div>
 	  <input type="radio" name="RadioButtons11" id="Radio26" value="1" onclick="showFre()">
       <label for="Radio26">Yes</label>
@@ -411,7 +423,7 @@ $("#contractval").addClass("none");
    </div>
  </div>
  <div class="container" style="height: 250px; width: 50%; float: right;">
-   	 <div style="font-weight: bold; font-size: 27px;"> Washing Machine <img title="Each use consumes 150 liters of water" src="img/infoicon.png"></div>
+   	 <div style="font-weight: bold; font-size: 27px;"> Washing Machine <img title="Each use consumes 150 liters of water as per the data provided on https://www.yvw.com.au/help-advice/why-my-water-use-high/check-your-appliances" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons12" id="Radio28" value="1" onclick="showFre1()">
       <label for="Radio28">Yes</label>
       <input type="radio" name="RadioButtons12" id="Radio29" value="0" onclick="hideFre1()">
@@ -435,7 +447,7 @@ $("#contractval").addClass("none");
       <label for="Radio45">Seven</label>
     </i>
   </div>
-  	 <div style="font-weight: bold; font-size: 27px;">Evaporative Cooler <img title="Each hour 90 liters of water is used" src="img/infoicon.png"></div>
+  	 <div style="font-weight: bold; font-size: 27px;">Evaporative Cooler <img title="Each hour 90 liters of water is used as per the data provided on https://www.yvw.com.au/help-advice/why-my-water-use-high/check-your-appliances" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons13" id="Radio30" value="1" onclick="showFre2()">
       <label for="Radio30">Yes</label>
       <input type="radio" name="RadioButtons13" id="Radio31" value="0" onclick="hideFre2()">
@@ -511,24 +523,21 @@ $(function() {
 });
   
   function eleccal(){
-    
-    var eh = document.querySelector('input[name=RadioButtons7]:checked').value;
+    var resi = document.querySelector('input[name=RadioButtons7]:checked').value;
     var ac = document.querySelector('input[name=RadioButtons8]:checked').value;
     var uh = document.querySelector('input[name=RadioButtons9]:checked').value;
-    var ewh = document.querySelector('input[name=RadioButtons10]:checked').value;
-    var finalelec = parseInt(eh) + parseInt(ac) + parseInt(uh) + parseInt(ewh);
-          if (finalelec == 4) {
-            var highcost = 335;
-              document.getElementById("elecost").innerHTML = ' is high and the average monthly bill would be $'+highcost;
-          }
-          else if (finalelec == 2 || finalelec == 3) {
-            var mediumcost = 205;
-          document.getElementById("elecost").innerHTML = ' is medium and the average monthly bill would be $'+mediumcost;
-          }
-             else {
-            var lowcost = 80;
-          document.getElementById("elecost").innerHTML = ' is low and the average monthly bill would be $'+lowcost;
-          }
+    var eh = document.querySelector('input[name=RadioButtons10]:checked').value;
+      if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } 
+      xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("elecbillval").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","energy.php?resi=" +resi + "&ac=" +ac + "&uh=" +uh + "&eh=" +eh, true);
+        xmlhttp.send();
   }
   
   function phonecost(){   
@@ -594,8 +603,25 @@ $(function() {
         };
         xmlhttp.open("GET","internetplan.php?internet=" +internet, true);
         xmlhttp.send();
-  
  }
+   function viewdata2() {
+    var resi = document.querySelector('input[name=RadioButtons7]:checked').value;
+    var ac = document.querySelector('input[name=RadioButtons8]:checked').value;
+    var uh = document.querySelector('input[name=RadioButtons9]:checked').value;
+    var eh = document.querySelector('input[name=RadioButtons10]:checked').value;
+      if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } 
+      xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("bestplansval2").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","energyplans.php?resi=" +resi + "&ac=" +ac + "&uh=" +uh + "&eh=" +eh, true);
+        xmlhttp.send();
+  }
+
 function intbill() {
 var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
       if (window.XMLHttpRequest) {
