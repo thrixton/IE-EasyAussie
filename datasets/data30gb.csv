@@ -1,0 +1,7 @@
+intcalls,plan,contract,provider1,cost1,provider2,cost2,provider3,cost3
+0,0,0,Telstra,30,Boost mobile,30,Optus,30
+0,0,1,TeleChoice,35,jeene mobile,29.9,Moose,33
+0,1,0,Telstra,30,Ovo,34.95,Optus,30
+1,0,0,Belong,40,TeleChoice,39,jeene mobile,44.9
+1,0,1,Optus,40,Vodafone,40,Dodo,40
+1,1,0,Lebara,39.9,Boost mobile,30,Ovo,34.95

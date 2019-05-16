@@ -1,0 +1,7 @@
+intcalls,plan,contract,provider1,cost1,provider2,cost2,provider3,cost3
+0,0,0,TeleChoice,19,Yomojo,19.9,exetel,14.99
+0,0,1,Moose,14,TeleChoice,16,Woolworths,20
+0,1,0,Boost,10,Lebara,14.9,Ovo,14.95
+1,0,0,Belong,15,iinet,29.99,exetel,20
+1,0,1,jeene mobile,22.5,Dodo,30,Moose,23
+1,1,0,Catach Connect,20,Boost,10,Lebara,14.9
