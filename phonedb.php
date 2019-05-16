@@ -7,9 +7,6 @@ $intercal = strval($_GET['intercal']);
 $plan = strval($_GET['plan']);
 $contract = strval($_GET['contract']);
 
-if ($plan ==1){
-$contract =0;
-}
 if ($data == 2) {
 $cost1sql = "SELECT cost1 FROM `data2gb` Where (intcalls='$intercal' and plan='$plan' and contract='$contract')";
 $cost2sql = "SELECT cost2 FROM `data2gb` Where (intcalls='$intercal' and plan='$plan' and contract='$contract')";

@@ -148,14 +148,14 @@ $("#frequency2").addClass("none");
 <script>
 function showFre3()
 {
-$("#contract").removeClass("none");
-$("#contract").addClass("showDIV");
+$("#contractval").removeClass("none");
+$("#contractval").addClass("showDIV");
 }
 
 function hideFre3()
 {
-$("#contract").removeClass("showdiv");
-$("#contract").addClass("none");
+$("#contractval").removeClass("showdiv");
+$("#contractval").addClass("none");
 }
 </script>
 
@@ -217,7 +217,7 @@ $("#contract").addClass("none");
     <br>
     <br>
     <br>
-<div class="container" style="height: 550px;width: 70%; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto; text-align: center;">
+<div class="container" style="height: 580px;width: 70%; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto; text-align: center;">
 <div style="text-align: center; font-size: 20px; font-family: Arial Black; font-weight: bold;">Calculate the approximate cost of monthly bills</div>
                   <div class="tab" style="height:50px; width: 65% border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
                     <button style="height:50px; width: 25%;font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
@@ -233,10 +233,10 @@ $("#contract").addClass("none");
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/phone2.jpg";>
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/phone4.jpg";>
                       </div>
-                      <div class="container" style="float: left; height: 200px; width: 50%;">
+                      <div class="container" style="float: right; height: 170px; width: 50%;">
+                        
                         <br>
-                        <br>
-                      <div style="font-weight: bold; font-size: 30px;">Data:</div>
+                      <div style="font-weight: bold; font-size: 27px;">Data:</div>
                       <div id="RadioButtons1" style="color: black;">
                         <input type="radio" name="RadioButtons1" id="Radio1" value="2">
                         <label for="Radio1">2GB</label>
@@ -245,7 +245,7 @@ $("#contract").addClass("none");
                         <input type="radio" name="RadioButtons1" id="Radio3" value="30">
                         <label for="Radio3">30GB</label>
                       </div>
-                      <div style="font-weight: bold;font-size: 30px;">International calling:</div>
+                      <div style="font-weight: bold;font-size: 27px;">International calling:</div>
                       <div id="RadioButtons2" style="color: black;">
                       <input type="radio" name="RadioButtons2" id="Radio4" value="1">
                       <label for="Radio4">Yes</label>
@@ -253,17 +253,17 @@ $("#contract").addClass("none");
                       <label for="Radio5">No</label>
                     </div>
                   </div>
-                   <div class="container" style="float: right; height: 200px; width: 50%; content: center;">
+                   <div class="container" style="float: left; height: 170px; width: 50%; content: center;">
                     <br>
-                    <br>
-                    <div style="font-weight: bold;font-size: 30px;">Plan:</div>
+                  
+                    <div style="font-weight: bold;font-size: 27px;">Plan:</div>
                       <div id="RadioButtons17" style="color: black;">
                       <input type="radio" name="RadioButtons17" id="Radio53" value="1" onclick="hideFre3()">
                       <label for="Radio53">Prepaid</label>
                       <input type="radio" name="RadioButtons17" id="Radio54" value="0" onclick="showFre3()">
                       <label for="Radio54">Postpaid</label>
 					  </div>
-                <div id="contract" style="font-weight: bold;font-size: 30px;">Contract:
+                <div id="contractval" style="font-weight: bold;font-size: 27px;">Contract:
                       <div id="RadioButtons18" style="color: black;">
                       <input type="radio" name="RadioButtons18" id="Radio55" value="1">
                       <label for="Radio55">Yes</label>
@@ -274,9 +274,10 @@ $("#contract").addClass("none");
           </div>
                    <div>
                      <button class="btn btn-primary btn" id="Button1" onClick="phonecost()">Calculate</button>
-                     <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Cheap deals</button>
+                     <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Best deals</button>
                    </div>
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="billval"></span></div>
+                   <div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval"></span></div>
                       <!--<div>
                         <button 
                             id="Button3" onclick="document.getElementById('popup')">Recommendation
@@ -531,14 +532,19 @@ $(function() {
           }
   }
   
-  function phonecost(){
-    
-    var data = document.querySelector('input[name=RadioButtons1]:checked').value;
-    var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
+  function phonecost(){   
+  var data = document.querySelector('input[name=RadioButtons1]:checked').value;
+  var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
 	var plan = document.querySelector('input[name=RadioButtons17]:checked').value;
-	var contract = document.querySelector('input[name=RadioButtons18]:checked').value;
+	
     //var phonetotalbill = parseInt(datacost) + parseInt(intercal);
     //document.getElementById("billval").innerHTML = phonetotalbill+'$';
+    if (plan == 1 ) {
+    var contract=0;
+  }
+  else {
+    var contract = document.querySelector('input[name=RadioButtons18]:checked').value;
+  }
       if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -549,9 +555,35 @@ $(function() {
             }
         };
         xmlhttp.open("GET","phonedb.php?data=" +data + "&intercal=" +intercal + "&plan=" +plan + "&contract=" +contract, true);
-
         xmlhttp.send();
   }
+  
+  function viewdata() {
+
+  var data = document.querySelector('input[name=RadioButtons1]:checked').value;
+  var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
+  var plan = document.querySelector('input[name=RadioButtons17]:checked').value;
+    //var phonetotalbill = parseInt(datacost) + parseInt(intercal);
+    //document.getElementById("billval").innerHTML = phonetotalbill+'$';
+      if (plan == 1 ) {
+    var contract=0;
+  }
+  else {
+    var contract = document.querySelector('input[name=RadioButtons18]:checked').value;
+  }
+      if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } 
+      xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("bestplansval").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","phoneplans.php?data=" +data + "&intercal=" +intercal + "&plan=" +plan + "&contract=" +contract, true);
+        xmlhttp.send();
+  }
+
 function intbill() {
 var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
       if (window.XMLHttpRequest) {
