@@ -218,7 +218,7 @@ $("#contractval").addClass("none");
     <br>
     <br>
 <div class="container" style="height: 580px;width: 70%; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto; text-align: center;">
-<div style="text-align: center; font-size: 20px; font-family: Arial Black; font-weight: bold;">Calculate the approximate cost of monthly bills</div>
+<div style="text-align: center; font-size: 20px; font-family: Arial Black; font-weight: bold; font-variant: small-caps;">Calculate the approximate cost of monthly bills</div>
                   <div class="tab" style="height:50px; width: 65% border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
                     <button style="height:50px; width: 25%;font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Internet')">Internet</button>
@@ -308,9 +308,10 @@ $("#contractval").addClass("none");
               <br>
                <div style="text-align: center;">
                   <button class="btn btn-primary btn" id="Button2" onClick="intbill()">Calculate</button>
-                  <button class="btn btn-primary btn" id="Button1" onClick="viewdata1()">Cheap deals</button>
+                  <button class="btn btn-primary btn" id="Button1" onClick="viewdata1()">Best deals</button>
                    </div>
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="intbillval"></span></div>
+				   <div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval1"></span></div>
               </div>
               </div>
           </div>
@@ -369,9 +370,10 @@ $("#contractval").addClass("none");
                         <img style=" height: 140px; width: 25%; float: left; opacity: 0.7;" src="img/water4.jpg">
                         
 <div class="container" style="height: 250px; width: 50%; float: left;">
-  <div style="font-weight: bold; font-size: 30px;" >No. of residents <img title="Each person uses an average of 224 liters per day and the cost includes cost for recycling, sweage and unchlorinated water!" src="img/infoicon.png">
-    <br>
-      <input type="radio" name="RadioButtons6" id="Radio15" value="1">
+<br>
+  <div style="font-weight: bold; font-size: 27px;" >No. of residents <img title="Each person uses an average of 224 liters per day and the cost includes cost for recycling, sweage and unchlorinated water!" src="img/infoicon.png"></div>
+      <div>
+	  <input type="radio" name="RadioButtons6" id="Radio15" value="1">
       <label for="Radio15">One</label>
       <input type="radio" name="RadioButtons6" id="Radio16" value="2">
       <label for="Radio16">Two</label>
@@ -380,17 +382,17 @@ $("#contractval").addClass("none");
       <input type="radio" name="RadioButtons6" id="Radio32" value="4">
       <label for="Radio32">Four</label>
     </div>
-    <br>
-    <div style="font-weight: bold; font-size: 30px;"> Dishwasher <img title="Each use consumes 50 liters of water" src="img/infoicon.png">
-      <br>
-      <input type="radio" name="RadioButtons11" id="Radio26" value="1" onclick="showFre()">
+	<br>
+    <div style="font-weight: bold; font-size: 27px;"> Dishwasher <img title="Each use consumes 50 liters of water" src="img/infoicon.png"></div>
+      <div>
+	  <input type="radio" name="RadioButtons11" id="Radio26" value="1" onclick="showFre()">
       <label for="Radio26">Yes</label>
       <input type="radio" name="RadioButtons11" id="Radio27" value="0" onclick="hideFre()">
       <label for="Radio27">No</label>
     </div>
-      <div id="frequency" class="none">
-    <i>Use per week:
-      <br>
+	<div id="frequency">
+    <div style="font-style: italic;">Use per week:
+	<br>
       <input type="radio" name="RadioButtons14" id="Radio32" value="1">
       <label for="Radio32">One</label>
       <input type="radio" name="RadioButtons14" id="Radio33" value="2">
@@ -405,18 +407,16 @@ $("#contractval").addClass("none");
       <label for="Radio37">Six</label>
       <input type="radio" name="RadioButtons14" id="Radio38" value="7">
       <label for="Radio38">Seven</label>
-     </i>
+     </div>
    </div>
  </div>
  <div class="container" style="height: 250px; width: 50%; float: right;">
-  <br>
-     <div style="font-weight: bold; font-size: 30px;"> Washing Machine <img title="Each use consumes 150 liters of water" src="img/infoicon.png"></div>
+   	 <div style="font-weight: bold; font-size: 27px;"> Washing Machine <img title="Each use consumes 150 liters of water" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons12" id="Radio28" value="1" onclick="showFre1()">
       <label for="Radio28">Yes</label>
       <input type="radio" name="RadioButtons12" id="Radio29" value="0" onclick="hideFre1()">
       <label for="Radio29">No</label>
-      <br>
-    <div id="frequency1" class="none">
+	<div id="frequency1">
      <i>Use per week:
       <br>
       <input type="radio" name="RadioButtons15" id="Radio39" value="1">
@@ -435,12 +435,12 @@ $("#contractval").addClass("none");
       <label for="Radio45">Seven</label>
     </i>
   </div>
-      <div style="font-weight: bold; font-size: 30px;">Evaporative Cooler <img title="Each hour 90 liters of water is used" src="img/infoicon.png"></div>
+  	 <div style="font-weight: bold; font-size: 27px;">Evaporative Cooler <img title="Each hour 90 liters of water is used" src="img/infoicon.png"></div>
       <input type="radio" name="RadioButtons13" id="Radio30" value="1" onclick="showFre2()">
       <label for="Radio30">Yes</label>
       <input type="radio" name="RadioButtons13" id="Radio31" value="0" onclick="hideFre2()">
       <label for="Radio31">No</label>
-    <div id="frequency2" class="none">
+    <div id="frequency2">
       <i>Hours a day:
         <br>
       <input type="radio" name="RadioButtons16" id="Radio46" value="1">
@@ -460,7 +460,6 @@ $("#contractval").addClass("none");
     </i>
   </div>
   </div>
-  <br>
                   <button class="btn btn-primary btn" id="Button4" onClick="waterbill()">Calculate</button>
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="waterbillval"></span></div>
               </div>
@@ -559,7 +558,6 @@ $(function() {
   }
   
   function viewdata() {
-
   var data = document.querySelector('input[name=RadioButtons1]:checked').value;
   var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
   var plan = document.querySelector('input[name=RadioButtons17]:checked').value;
@@ -583,7 +581,21 @@ $(function() {
         xmlhttp.open("GET","phoneplans.php?data=" +data + "&intercal=" +intercal + "&plan=" +plan + "&contract=" +contract, true);
         xmlhttp.send();
   }
-
+ function viewdata1() {
+ var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
+      if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } 
+      xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("bestplansval1").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","internetplan.php?internet=" +internet, true);
+        xmlhttp.send();
+  
+ }
 function intbill() {
 var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
       if (window.XMLHttpRequest) {
