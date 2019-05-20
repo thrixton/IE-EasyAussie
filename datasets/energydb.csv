@@ -1,33 +1,33 @@
-residents,airconditioner,electricheater,underfloorheating,provider1,cost1year,provider2,cost2year,provider3,cost3year,cost1,cost2,cost3
-1,0,0,0,Click Energy,483.61,Powershop,490.78,Red Energy,495.06,40.301,40.898,41.255
-1,0,0,1,Alinta Energy,1401.81,Simply Energy,1361.34,Tango Energy,1491.39,116.818,113.445,124.283
-1,0,1,0,Simply Energy,1054.46,Alinta Energy,1108.26,Tango Energy,1147.3,87.872,92.355,95.608
-1,0,1,1,Simply Energy,1908.8,Alinta Energy,1925.6,Tango Energy,2105.23,159.067,160.467,175.436
-1,1,0,0,Simply Energy,803.36,Click Energy,854,GloBird Energy,859.01,66.947,71.167,71.584
-1,1,0,1,Alinta Energy,1685.35,Simply Energy,1657.69,Lumo Movers,1890.6,140.446,138.141,157.55
-1,1,1,0,Simply Energy,1350.82,Alinta Energy,1391.74,Tango Energy,1479.59,112.568,115.978,123.299
-1,1,1,1,Alinta Energy,2553.22,Simply Energy,2564.79,Tango Energy,2840.76,212.768,213.733,236.73
-2,0,0,0,Simply Energy,609.48,Click Energy,611.68,Powershop,623.12,50.79,50.973,51.927
-2,0,0,1,Simply Energy,1463.81,Alinta Energy,1499.85,Tango Energy,1606.28,121.984,124.988,133.857
-2,0,1,0,Simply Energy,1156.93,Alinta Energy,1206.24,Tango Energy,1262.19,96.411,100.52,105.183
-2,0,1,1,Simply Energy,2011.27,Alinta Energy,2023.64,Tango Energy,2220.12,167.606,168.637,185.01
-2,1,0,0,Simply Energy,905.83,Alinta Energy,966.06,Tango Energy,980.64,75.486,80.505,81.72
-2,1,0,1,Simply Energy,1760.16,Alinta Energy,1783.39,Tango Energy,1938.57,146.68,148.616,161.548
-2,1,1,0,Simply Energy,1453.29,Alinta Energy,1489.78,Tango Energy,1594.48,121.108,124.148,132.873
-2,1,1,1,Alinta Energy,2651.26,Simply Energy,2667.26,Tango Energy,2955.66,220.938,222.272,246.305
-3,0,0,0,Simply Energy,688.45,Click Energy,710.38,GloBird Energy,719.44,57.371,59.198,59.953
-3,0,0,1,Simply Energy,1542.78,Alinta Energy,1575.41,Tango Energy,1694.83,128.565,131.284,141.236
-3,0,1,0,Simply Energy,1235.9,Alinta Energy,1281.8,Tango Energy,1350.74,102.992,106.817,112.562
-3,0,1,1,Simply Energy,2090.24,Alinta Energy,2099.19,Tango Energy,2308.67,174.187,174.933,192.389
-3,1,0,0,Simply Energy,984.8,Alinta Energy,1041.61,Tango Energy,1069.19,82.067,86.801,89.099
-3,1,0,1,Simply Energy,1839.14,Alinta Energy,1858.95,Tango Energy,2027.12,153.262,154.913,168.927
-3,1,1,0,Simply Energy,1532.26,Alinta Energy,1565.34,Tango Energy,1683.03,127.688,130.445,140.253
-3,1,1,1,Alinta Energy,2726.82,Simply Energy,2746.23,Momentum Energy,3075.59,227.235,228.853,256.299
-4,0,0,0,Simply Energy,829.38,Lumo Energy,896.07,Alinta Energy,892.91,69.115,74.673,74.409
-4,0,0,1,Simply Energy,1683.71,Alinta Energy,1710.25,Tango Energy,1852.85,140.309,142.521,154.404
-4,0,1,0,Simply Energy,1376.83,Alinta Energy,1416.64,Tango Energy,1508.76,114.736,118.053,125.73
-4,0,1,1,Simply Energy,2231.17,Alinta Energy,2234.03,Tango Energy,2466.69,185.931,186.169,205.558
-4,1,0,0,Simply Energy,1125.73,Alinta Energy,1176.39,Tango Energy,1227.21,93.811,98.033,102.268
-4,1,0,1,Simply Energy,1980.07,Alinta Energy,1993.79,Tango Energy,2185.14,165.006,166.149,182.095
-4,1,1,0,Simply Energy,1673.19,Alinta Energy,1700.18,Tango Energy,1841.05,139.433,141.682,153.421
-4,1,1,1,Alinta Energy,2861.66,Simply Energy,3113.17,Lumo Movers,3271.76,238.472,259.431,272.647
+residents,airconditioner,electricheater,underfloorheating,provider1,cost1year,provider2,cost2year,provider3,cost3year,cost1,cost2,cost3,link1,link2,link3
+1,0,0,0,Click Energy,483.61,Powershop,490.78,Red Energy,495.06,40.301,40.898,41.255,https://www.clickenergy.com.au/,https://www.powershop.com.au/,https://www.redenergy.com.au/
+1,0,0,1,Alinta Energy,1401.81,Simply Energy,1361.34,Tango Energy,1491.39,116.818,113.445,124.283,https://www.alintaenergy.com.au/energy-products,https://www.simplyenergy.com.au/,https://www.tangoenergy.com/
+1,0,1,0,Simply Energy,1054.46,Alinta Energy,1108.26,Tango Energy,1147.3,87.872,92.355,95.608,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+1,0,1,1,Simply Energy,1908.8,Alinta Energy,1925.6,Tango Energy,2105.23,159.067,160.467,175.436,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+1,1,0,0,Simply Energy,803.36,Click Energy,854,GloBird Energy,859.01,66.947,71.167,71.584,https://www.simplyenergy.com.au/,https://www.clickenergy.com.au/,https://www.globirdenergy.com.au/
+1,1,0,1,Alinta Energy,1685.35,Simply Energy,1657.69,Lumo Movers,1890.6,140.446,138.141,157.55,https://www.alintaenergy.com.au/energy-products,https://www.simplyenergy.com.au/,https://www.lumoenergy.com.au/
+1,1,1,0,Simply Energy,1350.82,Alinta Energy,1391.74,Tango Energy,1479.59,112.568,115.978,123.299,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+1,1,1,1,Alinta Energy,2553.22,Simply Energy,2564.79,Tango Energy,2840.76,212.768,213.733,236.73,https://www.alintaenergy.com.au/energy-products,https://www.simplyenergy.com.au/,https://www.tangoenergy.com/
+2,0,0,0,Simply Energy,609.48,Click Energy,611.68,Powershop,623.12,50.79,50.973,51.927,https://www.simplyenergy.com.au/,https://www.clickenergy.com.au/,https://www.powershop.com.au/
+2,0,0,1,Simply Energy,1463.81,Alinta Energy,1499.85,Tango Energy,1606.28,121.984,124.988,133.857,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+2,0,1,0,Simply Energy,1156.93,Alinta Energy,1206.24,Tango Energy,1262.19,96.411,100.52,105.183,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+2,0,1,1,Simply Energy,2011.27,Alinta Energy,2023.64,Tango Energy,2220.12,167.606,168.637,185.01,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+2,1,0,0,Simply Energy,905.83,Alinta Energy,966.06,Tango Energy,980.64,75.486,80.505,81.72,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+2,1,0,1,Simply Energy,1760.16,Alinta Energy,1783.39,Tango Energy,1938.57,146.68,148.616,161.548,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+2,1,1,0,Simply Energy,1453.29,Alinta Energy,1489.78,Tango Energy,1594.48,121.108,124.148,132.873,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+2,1,1,1,Alinta Energy,2651.26,Simply Energy,2667.26,Tango Energy,2955.66,220.938,222.272,246.305,https://www.alintaenergy.com.au/energy-products,https://www.simplyenergy.com.au/,https://www.globirdenergy.com.au/
+3,0,0,0,Simply Energy,688.45,Click Energy,710.38,GloBird Energy,719.44,57.371,59.198,59.953,https://www.simplyenergy.com.au/,https://www.clickenergy.com.au/,https://www.globirdenergy.com.au/
+3,0,0,1,Simply Energy,1542.78,Alinta Energy,1575.41,Tango Energy,1694.83,128.565,131.284,141.236,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+3,0,1,0,Simply Energy,1235.9,Alinta Energy,1281.8,Tango Energy,1350.74,102.992,106.817,112.562,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+3,0,1,1,Simply Energy,2090.24,Alinta Energy,2099.19,Tango Energy,2308.67,174.187,174.933,192.389,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+3,1,0,0,Simply Energy,984.8,Alinta Energy,1041.61,Tango Energy,1069.19,82.067,86.801,89.099,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+3,1,0,1,Simply Energy,1839.14,Alinta Energy,1858.95,Tango Energy,2027.12,153.262,154.913,168.927,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+3,1,1,0,Simply Energy,1532.26,Alinta Energy,1565.34,Tango Energy,1683.03,127.688,130.445,140.253,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+3,1,1,1,Alinta Energy,2726.82,Simply Energy,2746.23,Momentum Energy,3075.59,227.235,228.853,256.299,https://www.alintaenergy.com.au/energy-products,https://www.simplyenergy.com.au/,https://www.momentumenergy.com.au/
+4,0,0,0,Simply Energy,829.38,Lumo Energy,896.07,Alinta Energy,892.91,69.115,74.673,74.409,https://www.simplyenergy.com.au/,https://www.lumoenergy.com.au/,https://www.alintaenergy.com.au/energy-products
+4,0,0,1,Simply Energy,1683.71,Alinta Energy,1710.25,Tango Energy,1852.85,140.309,142.521,154.404,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+4,0,1,0,Simply Energy,1376.83,Alinta Energy,1416.64,Tango Energy,1508.76,114.736,118.053,125.73,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+4,0,1,1,Simply Energy,2231.17,Alinta Energy,2234.03,Tango Energy,2466.69,185.931,186.169,205.558,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+4,1,0,0,Simply Energy,1125.73,Alinta Energy,1176.39,Tango Energy,1227.21,93.811,98.033,102.268,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+4,1,0,1,Simply Energy,1980.07,Alinta Energy,1993.79,Tango Energy,2185.14,165.006,166.149,182.095,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+4,1,1,0,Simply Energy,1673.19,Alinta Energy,1700.18,Tango Energy,1841.05,139.433,141.682,153.421,https://www.simplyenergy.com.au/,https://www.alintaenergy.com.au/energy-products,https://www.tangoenergy.com/
+4,1,1,1,Alinta Energy,2861.66,Simply Energy,3113.17,Lumo Movers,3271.76,238.472,259.431,272.647,https://www.alintaenergy.com.au/energy-products,https://www.simplyenergy.com.au/,https://www.lumoenergy.com.au/

@@ -1,7 +1,7 @@
-intcalls,plan,contract,provider1,cost1,provider2,cost2,provider3,cost3
-0,0,0,vaya,24,Belong,25,Moose,24.8
-0,0,1,Woolworths mobile,30,Telstra,49,TeleChoice,25
-0,1,0,amaysim,30,Lebara,24.9,Aldi Mobile,25
-1,0,0,jeene mobile,22.5,spintel,22.95,pennytel,28.99
-1,0,1,jeene mobile,22.5,Dodo,30,Moose,33
-1,1,0,Ovo,29.95,TPG,29.99,Lyca Mobile,30
+intcalls,plan,contract,provider1,link1,cost1,provider2,link2,cost2,provider3,link3,cost3
+0,0,0,vaya,https://www.vaya.net.au/,24,Belong,https://www.belong.com.au/mobile,25,Moose,https://moosemobile.com.au,24.8
+0,0,1,Woolworths mobile,https://mobile.woolworths.com.au/,30,Telstra,https://www.telstra.com.au/mobile-phones/sim-only-plans,49,TeleChoice,https://www.telechoice.com.au/sim-plans,25
+0,1,0,amaysim,https://www.amaysim.com.au/plans/mobile-plans,30,Lebara,https://www.lebara.com.au/mobile-plans,24.9,Aldi Mobile,https://www.aldimobile.com.au/plans/,25
+1,0,0,jeene mobile,https://www.jeenee.org.au/,22.5,spintel,https://www.spintel.net.au/home/mobile,22.95,pennytel,https://pennytel.com.au/plans,28.99
+1,0,1,jeene mobile,https://www.jeenee.org.au/,22.5,Dodo,https://www.dodo.com/index.php/mobile,30,Moose,https://moosemobile.com.au,33
+1,1,0,Ovo,https://ovo.com.au/,29.95,TPG,https://www.tpg.com.au/mobile,29.99,Lyca Mobile,https://www.lycamobile.com.au/en/plans/,30

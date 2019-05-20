@@ -1,12 +1,12 @@
-id,provider,datagb,cost
-1,belong,unlimited,60
-2,tpg,unlimited,59.99
-3,exetel,unlimited,59.99
-4,exetel,500,54.99
-5,tpg,500,49.99
-6,internode,100,49.99
-7,exetel,100,49.99
-8,iinet,500,59.99
-9,spintel,500,44.95
-10,tpg,100,49.99
-11,Southern Phone,100,50
+id,provider,datagb,cost,link
+1,belong,unlimited,60,https://www.belong.com.au/
+2,tpg,unlimited,59.99,https://www.tpg.com.au/
+3,exetel,unlimited,59.99,https://www.exetel.com.au/
+4,exetel,500,54.99,https://www.exetel.com.au/
+5,tpg,500,49.99,https://www.tpg.com.au/
+6,internode,100,49.99,https://www.internode.on.net/
+7,exetel,100,49.99,https://www.exetel.com.au/
+8,iinet,500,59.99,https://www.iinet.net.au/home/
+9,spintel,500,44.95,https://www.spintel.net.au/
+10,tpg,100,49.99,https://www.tpg.com.au/
+11,Southern Phone,100,50,https://www.southernphone.com.au/

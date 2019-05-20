@@ -1,7 +1,7 @@
-intcalls,plan,contract,provider1,cost1,provider2,cost2,provider3,cost3
-0,0,0,Telstra,30,Boost mobile,30,Optus,30
-0,0,1,TeleChoice,35,jeene mobile,29.9,Moose,33
-0,1,0,Telstra,30,Ovo,34.95,Optus,30
-1,0,0,Belong,40,TeleChoice,39,jeene mobile,44.9
-1,0,1,Optus,40,Vodafone,40,Dodo,40
-1,1,0,Lebara,39.9,Boost mobile,30,Ovo,34.95
+intcalls,plan,contract,provider1,link1,cost1,provider2,link2,cost2,provider3,link3,cost3
+0,0,0,Telstra,https://www.telstra.com.au/mobile-phones/sim-only-plans,30,Boost mobile,https://boost.com.au/,30,Optus,https://www.optus.com.au/shop/mobile/phone-plans,30
+0,0,1,TeleChoice,https://www.telechoice.com.au/sim-plans,35,jeene mobile,https://www.jeenee.org.au/,29.9,Moose,https://moosemobile.com.au/,33
+0,1,0,Telstra,https://www.telstra.com.au/mobile-phones/sim-only-plans,30,Ovo,https://ovo.com.au/,34.95,Optus,https://www.optus.com.au/shop/mobile/phone-plans,30
+1,0,0,Belong,https://www.belong.com.au/mobile,40,TeleChoice,https://www.telechoice.com.au/sim-plans,39,jeene mobile,https://www.jeenee.org.au/,44.9
+1,0,1,Optus,https://www.optus.com.au/shop/mobile/phone-plans,40,Vodafone,https://www.telstra.com.au/mobile-phones/sim-only-plans,40,Dodo,https://www.dodo.com/index.php/mobile,40
+1,1,0,Lebara,https://www.lebara.com.au/mobile-plans,39.9,Boost mobile,https://boost.com.au/,30,Ovo,https://ovo.com.au/,34.95

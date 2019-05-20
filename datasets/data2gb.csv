@@ -1,7 +1,7 @@
-intcalls,plan,contract,provider1,cost1,provider2,cost2,provider3,cost3
-0,0,0,TeleChoice,19,Yomojo,19.9,exetel,14.99
-0,0,1,Moose,14,TeleChoice,16,Woolworths,20
-0,1,0,Boost,10,Lebara,14.9,Ovo,14.95
-1,0,0,Belong,15,iinet,29.99,exetel,20
-1,0,1,jeene mobile,22.5,Dodo,30,Moose,23
-1,1,0,Catach Connect,20,Boost,10,Lebara,14.9
+intcalls,plan,contract,provider1,link1,cost1,provider2,link2,cost2,provider3,link3,cost3
+0,0,0,TeleChoice,https://www.telechoice.com.au/sim-plans,19,Yomojo,https://yomojo.com.au/mobile-plans/,19.9,exetel,https://www.exetel.com.au/mobilephone/plans,14.99
+0,0,1,Moose,https://moosemobile.com.au/,14,TeleChoice,https://www.telechoice.com.au/sim-plans,16,Woolworths,https://mobile.woolworths.com.au/,20
+0,1,0,Vaya,https://www.vaya.net.au/,16,Lebara,https://www.lebara.com.au/mobile-plans,14.9,Ovo,https://ovo.com.au/,14.95
+1,0,0,Belong,https://www.belong.com.au/mobile,15,iinet,https://www.iinet.net.au/mobile/,29.99,exetel,https://www.exetel.com.au/mobilephone/plans,20
+1,0,1,jeene mobile,https://www.jeenee.org.au/,22.5,Dodo,https://www.dodo.com/index.php/mobile,30,Moose,https://moosemobile.com.au/,23
+1,1,0,Catch Connect,https://catchconnect.com.au/products/mobile,20,Vaya,https://www.vaya.net.au/,16,Lebara,https://www.lebara.com.au/mobile-plans,14.9
