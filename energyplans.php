@@ -61,22 +61,19 @@ $link3sql = "SELECT link3 FROM `energydb` Where residents='$resi' and airconditi
 	echo "Plan by " ;
 	echo($provider1sql4);
 	echo " for $";
-	echo ($cost1sql4);
-		echo nl2br("\n");
-	echo '<a href="'.$link1sql4.'">Click here</a>' . "\n";
+	echo ($cost1sql4). "\n";
+	echo '<a href="'.$link1sql4.'">Click here for details</a>' . "\n";
 		echo nl2br("\n");
 	echo "Plan by ";
 	echo($provider2sql4);
 	echo " for $";
-	echo($cost2sql4);
-		echo nl2br("\n");
-	echo '<a href="'.$link2sql4.'">Click here</a>' . "\n";
+	echo($cost2sql4). "\n";
+	echo '<a href="'.$link2sql4.'">Click here for details</a>' . "\n";
 		echo nl2br("\n");
 	echo "Plan by ";
 	echo($provider3sql4);
 	echo " for $";
-	echo($cost3sql4);
-	echo nl2br("\n");
-	echo '<a href="'.$link3sql4.'">Click here</a>' . "\n";
+	echo($cost3sql4). "\n";
+	echo '<a href="'.$link3sql4.'">Click here for details</a>' . "\n";
 		echo nl2br("\n");
 ?> 

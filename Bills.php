@@ -341,7 +341,7 @@ $("#contractval").addClass("none");
 					</div>
 				</div>
 				</div>
-                   <div class="container" style= "height: 170px; float: center; ">
+                   <div>
                      <button class="btn btn-primary btn" id="Button1" onClick="phonecost()">Calculate</button>
                      <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Best deals</button>
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="billval"></span></div>
@@ -434,7 +434,7 @@ $("#contractval").addClass("none");
           <label for="Radio25">No</label>
         </div>
 </div>
-<div class="container" style= "height: 170px; float: center;">
+<div>
 				<button class="btn btn-primary btn" id="Button3" onClick="eleccal()">Calculate</button>
 				<button class="btn btn-primary btn" id="Button1" onClick="viewdata2()">Best deals</button>
 		
