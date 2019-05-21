@@ -15,9 +15,8 @@ $values = explode (",",$string_product);
 echo $values[0] . "\n";
 	echo " for $";
 echo $values[1] . "\n";
-		echo nl2br("\n");
 		$linkaddress = $values[2];
-echo '<a href="'.$linkaddress.'">Click here</a>' . "\n";
+echo '<a href="'.$linkaddress.'">Click here for details</a>' . "\n";
 		echo nl2br("\n");
 }
 
