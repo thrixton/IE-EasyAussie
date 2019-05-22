@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>First Steps - Insider Guides | Study in Australia</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <style type="text/css">
+    section {
+        font-family: BrandonGrotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    ul li a{
+    	font-size: 16px;
+    }
+
+    .description {
+        font-weight: normal;
+        font-size: 1.7rem;
+        margin-top: 40px;
+    }
+
+    section div>img {
+        padding-left: 40px;
+    }
+
+    </style>
+</head>
+
+<body class="">
+    <div class="navbar-wrapper" style="position: fixed; top: 12px;left: 10px;right: 10px; z-index: 999;">
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse navbar-static-top" style="background-color: white; color: white; border: 1px solid rgb(224,227,230);margin-top: -20px;box-shadow: 4px 4px 20px lightblue;">
+                <div class="container-fluid">
+                    <div class="navbar-header" style="height: 62px;">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" value="click here to start" style="background-color: black; width: 40px;height: 40px; text-align: center;">
+                        </button>
+                        <a class="navbar-brand active" href="http://www.firststepsinmel.ml/"><img src="img/webLogo3.png" style="display: inline; height: 43px; margin-top: -10px;">
+                            <span class="hidden-sm-down hidden-xs" style="font-family: 'Arial Black';font-size: 24px;color:black; height: 20px; line-height: 20px;margin-left: 10px;">First Steps in Melbourne</span></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://www.firststepsinmel.ml/" style="color: black;">Home</a></li>
+                            <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="introduction.php">Calculator</a></li>
+                                    <li><a href="Bills.php">Other expenses</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" id="subSupDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="stuSup"><span class="caret"></span>&nbsp;&nbsp;Student Support</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Find a Suburb</a></li>
+                                    <li><a href="TipsList.html">Guidance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="comparison.html" style="color: black;">Comparison</a></li>
+                            <li><a href="Prediction.php" style="color: black;">Prediction</a></li>
+                            <!-- <li class="dropdown" id="preDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="preSup"><span class="caret"></span>&nbsp;&nbsp;Prediction</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Your future costs</a></li>
+                                    <li><a href="#">article 1</a></li>
+                                    <li><a href="#">article 2</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="introduction.php">Living Cost Calculator</a></li>
+                                    <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Student Support</a></li>
+                                    <li><a href="comparison.html">Compare with Shanghai</a></li>
+                                    <li><a href="Prediction.php">Prediction</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container" style="width: 92%; border:1px solid rgb(238,238,238); margin-top: 100px;">
+        <!--         <section class="header">
+            <h1 class="headerTitle" style="font-weight: bolder; margin-left: 80px;">
+               
+            </h1>
+        </section> -->
+        <section class="container">
+            <div class="col-md-5 col-xs-hidden">
+                <a href="accommodationTips.html"><img src="img/LivingArea.jpg" alt="" class="img1" style="width: 356px; height: 200px;"></a>
+            </div>
+            <div class="col-md-7 col-xs-9">
+                <p class="title"><a href="accommodationTips.html">Melbourne Living Area</a></p>
+                <p class="description"> Melbourne had been voted the world’s most livable city from 2011 to 2018. Even in 2019, Melbourne loses world’s most livable city, but it still is a very attractive city with fantastic quality of life... </p>
+            </div>
+            <br>
+        </section>
+        
+        <br>
+        <hr class="featurette-divider" width="1150px" style="margin:auto; height: 20px;">
+        <section class="container">
+            <div class="col-md-5 col-xs-hidden">
+                <a href="transportationTips.html"><img src="img/trans.png" alt="" class="img1" style="width: 356px; height: 200px;"></a>
+            </div>
+            <div class="col-md-7 col-xs-9">
+                <p class="title"><a href="transportationTips.html">Public Transportation in Melbourne</a></p>
+                <p class="description"> The public transportation system in Melbourne has rail, tram and bus services. This public transportation system provides the service to residents in Great Melbourne by over 300 bus routes and 16 main rail line. For these bus service, some quite special community or university bus services are operated without any charging... </p>
+            </div>
+            <br>
+        </section>
+        <br>
+        <hr class="featurette-divider" width="1150px" style="margin:auto; height: 20px;">
+        <section class="container">
+            <div class="col-md-5 col-xs-hidden">
+                <a href="EatingIn.html"><img src="img/eatingHome.jpg" alt="" class="img1" style="width: 356px; height: 200px;"></a>
+            </div>
+            <div class="col-md-7 col-xs-9">
+                <p class="title"><a href="EatingIn.html">Few Tips for Eating at home</a></p>
+                <p class="description"> Cooking and eating at home can saving 50% and sometimes even 80% rather than eating out. Therefore, if you can cook and eat at home, you can save a lot of budget on eating. If you don’t know how to cook, it is time to learn... </p>
+            </div>
+            <br>
+        </section>
+        <br>
+        <hr class="featurette-divider" width="1150px" style="margin:auto; height: 20px;">
+        <section class="container">
+            <div class="col-md-5 col-xs-hidden">
+                <a href="EatingOut.html">
+                    <img src="img/eatingOut.png" alt="" class="img1" style="width: 356px; height: 200px;">
+                </a>
+            </div>
+            <div class="col-md-7 col-xs-9">
+                <p class="title"><a href="EatingOut.html">Few Tips for Eating Out</a></p>
+                <p class="description">In Melbourne, the immigration from all over the world leads the unique and diversity of food culture. High quality level of food service brings the sparking of Melbourne’s retreatant. In addition, you can find the best retreatant in Melbourne that bring the best local food from all over the world...</p>
+            </div>
+            <br>
+             <hr class="featurette-divider" width="1150px" style="margin:auto; height: 20px;">
+            <section class="container" style="padding-top: 15px; margin-left: -15px;">
+                <div class="col-md-5 col-xs-hidden">
+                    <a href="OtherTips.html"><img src="img/otherTips1.png" alt="" class="img1" style="width: 356px; height: 200px;"></a>
+                </div>
+                <div class="col-md-7 col-xs-9">
+                    <p class="title"><a href="OtherTips.html">Other Expense Tips</a></p>
+                    <p class="description"> Studying in Melbourne, students need to consider about not only the main living costs which include accommodation, Transportation and food expenses, but also other living expenses. These other expenses might involve hairdressing, gym, shopping and entertainment. Students who are studying and living in Melbourne can easily find it to indulge in this premium and new lifestyle... </p>
+                </div>
+                <br>
+            </section>
+            <br>
+            <hr class="featurette-divider" width="1150px" style="margin:auto; height: 20px;">
+            <section class="container" style="padding-top: 15px; margin-left: -15px;">
+                <div class="col-md-5 col-xs-hidden">
+                    <a href="StudentHealth.php"><img src="img/studentHealthOut.png" alt="" class="img1" style="width: 356px; height: 200px;"></a>
+                </div>
+                <div class="col-md-7 col-xs-9">
+                    <p class="title"><a href="StudentHealth.php">Overseas Student Health Cover (OSHC)</a></p>
+                    <p class="description"> Studying in overseas is not easy to prepare, like planning budget, adapting new lifestyle and even preparing the clothing.  however, Overseas Student Health Cover (OSHC) is one of the most important steps when students plan to come to Australian... </p>
+                </div>
+                <br>
+            </section>
+            <br>
+        </section>
+    </div>
+    <br>
+    <br>
+    <footer id="footer" style="background: white;position: fixed; bottom: 0;left:0px;right: 0px;  width:95%; margin: auto;border-radius: 5px;box-shadow: 4px 4px 20px lightblue; border:1px solid rgb(247,247,247);">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center">&copy;2019 by 'First steps in Melbourne'. Proudly created with EasyAussie team. &middot;
+            <a href="http://www.firststepsinmel.ml">firststepsinmel.ml</a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+	function calculatorDrag() {
+	    $("#costFont").css('background-color', "white");
+	    $("#stuSup").css('background-color', "white");
+	    $("#preSup").css('background-color', "white");
+	}
+	function btnAction(){
+	  $("#btn").css('right','0px');
+	}
+	function btnOut(){
+	  $("#btn").css('right','-10px');
+	}
+</script>
+
+</html> <!-- end of site. what a ride! -->

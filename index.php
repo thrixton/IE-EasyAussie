@@ -4,17 +4,6 @@
   $lng = array();
   require('config/db.php');
 
-  // $queryPlace = "SELECT * FROM livingcost;";
-  // $results = mysqli_query($conn, $queryPlace);
-
-
-  // while($row = mysqli_fetch_assoc($results)){
-  //   $lat[] = $row['lat'];
-  //   $lng[] = $row['lon'];
-  //   $content[] = $row['Suburb'];
-  //   $region[] = $row['Region'];
-  //   $post[] = $row['postcode'];
-  // }
 
   $queryPlace = "SELECT * FROM maptest;";
   $mapResult = mysqli_query($conn, $queryPlace);
@@ -25,7 +14,6 @@
     $lng[] = $row['lon'];
     $content[] = $row['Suburb'];
     $region[] = $row['Region'];
-    //$post[] = $row['postcode'];
     $website[] = $row['website'];
     $cost[] = $row['Average_per_person'];
   }
@@ -36,9 +24,10 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="utf-8">
+    <!-- <meta charset="utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <!-- test -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -59,6 +48,7 @@
       }
       #navbar ul li a:hover{
           color: gray;
+      }
     </style>
     <script src="assets/js/ie-emulation-modes-warning.js"></script>
     <script>
@@ -116,7 +106,7 @@
                 {
                   coords:{lat:lat[i],lng:lng[i]},
                   content:"<h5 style='text-align:center;'>" + content[i] + '</h5>' +  'Region: ' + reg[i] +  '<br>' + 'Average Rent: ' + cost[i] + '<br>' + "<a target='_blank' href= '"+website[i]+"'>" + 'View suburb detail on googleMap' + "</a>",
-                  iconImage:'img/school4.png'
+                  
                 }
               );
           }
@@ -277,40 +267,57 @@
 <!--nav-->
 
 <body>
-    <div class="navbar-wrapper" style="position: fixed;">
-        <div class="container-fluid">
-            <nav class="navbar navbar-inverse navbar-static-top" style="background-color: white; color: white; border: 0.5px solid white;">
+    <div class="navbar-wrapper col-md-12 col-xs-12 col-lg-12" style="position: fixed;">
+        <div>
+            <nav class="navbar navbar-inverse navbar-static-top" style="background-color: white; color: white; border: 1px solid rgb(224,227,230);margin-top: -20px;box-shadow: 4px 4px 20px lightblue;">
                 <div class="container">
-                    <div class="navbar-header" style="height: 52px;">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="background-color: black;">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                    <div class="navbar-header" style="height: 62px;">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" value="click here to start" style="background-color: black; width: 40px;height: 40px; text-align: center;">
                         </button>
                         <!-- <a class="navbar-brand active" href="http://www.firststepsinmel.ml/" ><img src="img/logoBtn.png" style="width:50%;margin-top: -16px;"></a>
                         <span style="line-height: 52px;border:1px solid white; font-size: 20px;">First Steps in Melbourne</span> -->
-                        <a class="navbar-brand active" href="http://www.firststepsinmel.ml/" ><img src="img/webLogo3.png" style="display: inline; height: 52px; margin-top: -15px;">
-                         <span class="hidden-sm-down hidden-xs" style="font-family: 'Arial Black';font-size: 24px;color:black; margin-left: 10px;">First Steps in Melbourne</span></a>
+                        <a class="navbar-brand active" href="http://www.firststepsinmel.ml/" ><img src="img/webLogo3.png" style="display: inline; height: 43px; margin-top: -10px;">
+                         <span class="hidden-sm-down hidden-xs" style="font-family: 'Arial Black';font-size: 24px;color:black; height: 20px; line-height: 20px;margin-left: 10px;">First Steps in Melbourne</span></a>
                     </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav" style="margin-left:100px;">
+                    <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
+                        <ul class="nav navbar-nav" >
                             <li><a href="http://www.firststepsinmel.ml/">Home</a></li>
-                            <li><a href="introduction.php">Living Cost Calculator</a></li>
-							<li><a href="Bills.php">Bills</a></li>
-                            <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/">Student Support</a></li>
-                            <li><a href="comparsion.html">Compare with Shanghai</a></li>
-                      <!--       <li><a href="#pred">Prediction</a></li>
-                            <li><a href="#about">About us</a></li> -->
+                            <!-- <li><a href="introduction.php">Living Cost Calculator</a></li> -->
+                            <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="introduction.php">Calculator</a></li>
+                                    <li><a href="Bills.php">Other expenses</a></li>
+                                  </ul>
+                                </li>
+
+                            <!-- <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/">Student Support</a></li> -->
+                            <li class="dropdown" id="subSupDrag" onclick="calculatorDrag()">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="stuSup"><span class="caret"></span>&nbsp;&nbsp;Student Support</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Find a Suburb</a></li>
+                                    <li><a href="TipsList.html">Guidance</a></li>
+                                  </ul>
+                                </li>
+                            <li><a href="comparison.html">Comparison</a></li>
+                            <li><a href="prediction.php">Prediction</a></li>
+                           <!--  <li class="dropdown" id="preDrag" onclick="calculatorDrag()">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="preSup"><span class="caret"></span>&nbsp;&nbsp;Prediction</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="prediction.php">Your future costs</a></li>
+                                    <li><a href="#">article 1</a></li>
+                                    <li><a href="#">article 2</a></li>
+                                  </ul>
+                                </li> -->
+                         <!--    <li><a href="#about">About us</a></li> -->
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="introduction.php">Living Cost Calculator</a></li>
-									<li><a href="Bills.php">Bills</a></li>
-                                    <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/">Student Support</a></li>
-                                    <li><a href="comparsion.html">Compare with Shanghai</a></li>
-                        <!--             <li><a href="#">Prediction</a></li>
-                                    <li><a href="#">About us</a></li> -->
+                                    <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Student Support</a></li>
+                                    <li><a href="comparison.html">Comparison</a></li>
+                                    <li><a href="prediction.php">Prediction</a></li>
+                                    <!--<li><a href="#">About us</a></li> -->
                                 </ul>
                             </li>
                         </ul>
@@ -348,7 +355,7 @@
                     <div class="carousel-caption">
                         <h1 style="font-size:46px; font-weight: bolder;">Need student support to make a change?</h1>
                         <p style="font-size: 17px;">We provide information for helping you find a suitable suburb based on distance to your campus, rent cost, convenient level, and food service level.</p>
-                        <p><a class="btn btn-lg btn-primary" href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/" role="button">Student Support</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/" role="button">Find a Suburb</a></p>
                     </div>
                 </div>
             </div>
@@ -358,7 +365,7 @@
                     <div class="carousel-caption">
                         <h1 style="font-size:46px; font-weight: bolder;">Living in Melbourne and Shanghai</h1>
                         <p style="font-size: 17px;">Melbourne and Shanghai have different living cost in each aspect. You can find out more comparisons in price index between Melbourne and Shanghai. </p>
-                        <p><a class="btn btn-lg btn-primary" href="comparsion.html" role="button">Start Compare Now</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="comparison.html" role="button">Start Compare Now</a></p>
                     </div>
                 </div>
             </div>
@@ -373,7 +380,7 @@
         </a>
     </div><!-- /.carousel -->
     <!-- Video -->
-    <div class="iframe" style="overflow: hidden;">
+    <div class="iframe" style="overflow: hidden;text-align: center;">
           <div class="video col-lg-7 col-md-7" style="width: 700px;">
             <iframe width="640" height="340" src="https://www.youtube.com/embed/6Gw70FIB2Ss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
             </iframe>
@@ -382,18 +389,19 @@
             <h1 style="font-weight: bolder; font-size: 55px; color: rgb(51,122,183);font-family: 'poppins'">Melbourne</h1>
             <br>
             <span style="font-size: 20px;">
-            Melbourne has been voted the world is most livable city for six years in a row, and it is not hard to see why. It is a very cool city with a fantastic quality of life. The locals share many passions, with a particular focus on coffee, sport, music, the arts and food.
+            Melbourne had been voted the world is most livable city for seven years from 2011 to 2017, and it is not hard to see why. It is a very cool city with a fantastic quality of life. The locals share many passions, with a particular focus on coffee, sport, music, the arts and food.
             Melbourne is a city of many cultures and backgrounds and is accepting and inclusive of all.
             </span>
           </div>
     </div>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Source from: https://liveinmelbourne.vic.gov.au/</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source from: https://liveinmelbourne.vic.gov.au/</p>
 
     <hr class="featurette-divider" width="1150px" style="margin:auto;">
     <br>
     <br>
     <br>
     <br>
+    
 
     <div class="container marketing">
         <div class="row">
@@ -405,28 +413,45 @@
                 <p><a class="btn btn-default" href="introduction.php" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-                <a href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/"><img src="img/bulb2.png" alt="Generic placeholder image" width="140" height="140" style="width: 80px;height: 80px;"></a>
-                <h2>Student Support</h2>
-                <p>Looking for some place to live with great convenient or close to your university? With a personalized recommendation system, you can find some suggestions based on your own spending habits.</p>
+                <a href="TipsList.html"><img src="img/bulb2.png" alt="Generic placeholder image" width="140" height="140" style="width: 80px;height: 80px;"></a>
+                <h2>Guidance</h2>
+                <p>As an international student who is new to Melbourne, experiencing Melbourne's lifestyle is the first step in integrating into local life. Here we provide the student guidance for you with some lifestyle tips.</p>
                 <br>
-                <p><a class="btn btn-default" href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default" href="TipsList.html" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-                <a href="comparison.html"><img src="img/tianping3.png" alt="Generic placeholder image" width="140" height="140" style="width: 80px;height: 80px;"></a>
-                <h2>Compare with Shanghai</h2>
-                <p>For comparing the cost of living in Shanghai to Melbourne, it will show the different percentage and cost. It will be considered about cloth, food, leisure, transport and utilities. </p>
+                <a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/"><img src="img/location.png" alt="Generic placeholder image" width="140" height="140" style="width: 80px;height: 80px;"></a>
+                <h2>Find a Suburb</h2>
+                <p>Looking for some place to live with great convenient or close to your university? With a personalized recommendation system, you can find some suggestions based on your own spending habits.</p>
                 <br>
-                <br>
-                <p><a class="btn btn-default" href="comparsion.html" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default" href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
+  <!-----------------------------comparision--------------------------------------------->
+            <div class="col-lg-6" style="text-align: center; padding-left: 90px;">
+                <a href="comparison.html"><img src="img/tianping3.png" alt="Generic placeholder image" width="140" height="140" style="width: 80px;height: 80px;"></a>
+                <h2>Comparison</h2>
+                <p style="">For comparing the cost of living in Shanghai to Melbourne, it will show the different percentage and cost. It will be considered about cloth, food, leisure, transport and utilities. </p>
+                <br>
+                <p><a class="btn btn-default" href="comparison.html" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+<!----------------------------------------------------------------------------------------->
+  <!-------------------------------------Predicitons--------------------------------------------->
+            <div class="col-lg-6" style="text-align: center;padding-right: 90px;">
+                <a href="prediction.php"><img src="img/prediction2.png" alt="Generic placeholder image" width="140" height="140" style="width: 80px;height: 80px;"></a>
+                <h2>Prediction</h2>
+                <p>Our external economic environment is always full of uncertainty. In general, prices rise every year with a certain rate of inflation. We provide you with a visualized prediction report with economic data. </p>
+                <br>
+                <p><a class="btn btn-default" href="prediction.php" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+<!----------------------------------------------------------------------------------------->
         </div><!-- /.row -->
         <!-- START THE FEATURETTES -->
         <hr class="featurette-divider">
         <div class="row featurette">
             <div class="col-md-6" style="margin-top: -120px;">
-                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;">Make Melbourne be your home</h2>
+                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;">Make Melbourne your home</h2>
                 <br>
-                <p class="lead">Melbourne is one of the most livable places all over the world. People who are living in Melbourne will enjoy a safe city, world- class education, business opportunities and relaxing and healthy environment. There are some amazing discover that Melbourne has to offer you.</p>
+                <p class="lead">Melbourne is one of the most livable places all over the world. People who are living in Melbourne will enjoy a safe city, world- class education, business opportunities and relaxing and healthy environment. There are some amazing discover that Melbourne has to offer you. <a href="accommodationTips.html">Find More</a></p>
             </div>
             <div class="col-md-6">
                 <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="img/CBD1.jpg" style="width: 500px;height: 300px; border-radius: 20px;">
@@ -435,9 +460,9 @@
        <hr class="featurette-divider" style="height: 5px;"> 
         <div class="row featurette">
             <div class="col-md-7 col-md-push-5" style="margin-top: -30px; margin-top: -120px;">
-                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;">Discover Melbourne lifestyle</h2>
+                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;margin-left: 30px;">Discover Melbourne lifestyle</h2>
                 <br>
-                <p class="lead">Discover the new Melbourne life in the southern hemisphere. You will easily find it to indulge in this premium and new lifestyle Melbourne has to provide. As an international student, you can enjoy an easy transition into your new life in Melbourne. Discover more and you will like this new Melbourne lifestyle.</p>
+                <p class="lead" style="margin-left: 30px;">Discover the new Melbourne life in the southern hemisphere. You will easily find it to indulge in this premium and new lifestyle Melbourne has to provide. As an international student, you can enjoy an easy transition into your new life in Melbourne. Discover more and you will like this new Melbourne lifestyle. <a href="OtherTips.html">Find More</a></p>
             </div>
             <div class="col-md-5 col-md-pull-7" >
                 <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="img/run.jpg" style="width: 500px; border-radius: 20px;">
@@ -452,7 +477,7 @@
         <!-- FOOTER -->
         <footer class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="height: 50px; width:100%;">
             <p class="pull-right" style="line-height: 50px;"><a href="#">Back to top</a></p>
-            <p style="line-height: 50px;">&copy;2019 by 'First steps in Melbourne'. Proudly created with EasyAussie team. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p style="line-height: 50px;">&copy;2019 by 'First steps in Melbourne'. Proudly created with EasyAussie team. &middot;</p>
         </footer>
     </div>
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
@@ -460,10 +485,22 @@
         window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
         </script>
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
         <script src="assets/js/vendor/holder.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript">
+          function calculatorDrag(){
+              $("#costFont").css('background-color',"white");
+              $("#stuSup").css('background-color',"white");
+              $("#preSup").css('background-color',"white");
+          }
+          function btnAction(){
+            $("#btn").css('right','0px');
+          }
+          function btnOut(){
+            $("#btn").css('right','-10px');
+          }
+        </script>
+
 </body>
 
 </html>
